@@ -1,36 +1,43 @@
 ﻿Public Class Form1
+    'Boolean array to hold whether seat is booked or not
     Dim seats() As Boolean = {False, False, False, False, False, False, False, False, False, False}
+    'Bool variable to hold if FirstClass is full
     Dim fullFC As Boolean = False
+    'Bool variable to hold if Economy is full
     Dim fullEco As Boolean = False
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnAssign_Click(sender As Object, e As EventArgs) Handles btnAssign.Click
+        'Control PictureBox array to hold seat icons
         Dim seatBox() As PictureBox = {pbSeat1, pbSeat2, pbSeat3, pbSeat4, pbSeat5, pbSeat6, pbSeat7, pbSeat8, pbSeat9, pbSeat10}
-        Dim count As Integer = 0
+        'Bool variable to break out of While loop once a seat is filled.
         Dim emptySeat As Boolean = False
+        'Counter
         Dim i As Integer = 0
 
+        '
+        'While the seat is empty, if FirstClass is selected and we are looking at seats 1-5
+        'If the seat is empty, then make seats(i) = true, change the color of the picturebox
+        'and exit loop
+        '
         While emptySeat = False
             If rbFC.Checked Then
                 If i <= 4 Then
                     If seats(i) = False Then
                         seats(i) = True
-                        'Label1.Text = ("Your seat is " + (i + 1).ToString)
                         lblBPSeat.Text = ("Seat Number:" & i + 1)
                         seatBox(i).BackColor = Color.LightGray
                         lblBPClass.Text = "First Class"
                         pnlBP.Visible = True
                         emptySeat = True
                     Else
-                        i += 1
+                        i += 1  'Else add one to counter and re-loop.
                     End If
                 Else
                     fullFC = True
-                    'Label1.Text = "No seats remaining in First Class"
-                    If fullFC = True And fullEco = True Then
-                        'Label1.Text = "No seats remaining"
+                    If fullFC = True And fullEco = True Then 'If first class and economy is full, then move to Economy
                         Dim newFlight As Integer = MessageBox.Show("Would you like to start booking the next flight?", "Book New Flight", MessageBoxButtons.YesNo)
                         If newFlight = DialogResult.No Then
                             MessageBox.Show("The next flight leaves in 3 hours")
-                        ElseIf newFlight = DialogResult.Yes Then
+                        ElseIf newFlight = DialogResult.Yes Then 'Reset the form for next flight
                             Dim seats() As Boolean = {False, False, False, False, False, False, False, False, False, False}
                             Dim fullFC As Boolean = False
                             Dim fullEco As Boolean = False
@@ -40,6 +47,7 @@
                         End If
                         Return
                     Else
+                        'Dialog session to ask to book economy instead
                         Dim result As Integer = MessageBox.Show("Would you like to fly Economy instead?", "No Seats Available", MessageBoxButtons.YesNo)
                         If result = DialogResult.No Then
                             MessageBox.Show("The next flight leaves in 3 hours")
@@ -50,24 +58,27 @@
                     End If
                     Return
                 End If
+                '
+                'While the seat is empty, if Economy is selected and we are looking at seats 6-10
+                'If the seat is empty, then make seats(i) = true, change the color of the picturebox
+                'and exit loop
+                '
             ElseIf rbEco.Checked Then
                 If i < 4 Then
-                    i = 5
+                    i = 5 'If counter is below 5 and Economy is selected then make counter start at 5
                     If seats(i) = False Then
                         seats(i) = True
-                        'Label1.Text = ("Your seat is " + (i + 1).ToString)
                         emptySeat = True
                         lblBPSeat.Text = ("Seat Number:" & i + 1)
                         seatBox(i).BackColor = Color.LightGray
                         lblBPClass.Text = "Economy Class"
                         pnlBP.Visible = True
                     Else
-                        i += 1
+                        i += 1 'Else add one to counter and re-loop.
                     End If
                 ElseIf i > 4 And i <= 9 Then
                     If seats(i) = False Then
                         seats(i) = True
-                        'Label1.Text = ("Your seat is " + (i + 1).ToString)
                         lblBPSeat.Text = ("Seat Number:" & i + 1)
                         seatBox(i).BackColor = Color.LightGray
                         lblBPClass.Text = "Economy Class"
@@ -78,13 +89,11 @@
                     End If
                 Else
                     fullEco = True
-                    'Label1.Text = "No seats remaining in First Class"
-                    If fullFC = True And fullEco = True Then
-                        'Label1.Text = "No seats remaining"
+                    If fullFC = True And fullEco = True Then 'If first class and economy is full, then move to Economy
                         Dim newFlight As Integer = MessageBox.Show("Would you like to start booking the next flight?", "Book New Flight", MessageBoxButtons.YesNo)
                         If newFlight = DialogResult.No Then
                             MessageBox.Show("The next flight leaves in 3 hours")
-                        ElseIf newFlight = DialogResult.Yes Then
+                        ElseIf newFlight = DialogResult.Yes Then 'Reset the form for next flight
                             Dim seats() As Boolean = {False, False, False, False, False, False, False, False, False, False}
                             Dim fullFC As Boolean = False
                             Dim fullEco As Boolean = False
@@ -93,6 +102,7 @@
                             Me.Close()
                         End If
                     Else
+                        'Dialog session to ask to book First Class instead
                         Dim result As Integer = MessageBox.Show("Would you like to fly First Class instead?", "No Seats Available", MessageBoxButtons.YesNo)
                         If result = DialogResult.No Then
                             MessageBox.Show("The next flight leaves in 3 hours")
@@ -107,17 +117,21 @@
         End While
     End Sub
 
-
+    'Close Form
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         pnlBP.Visible = False
     End Sub
 
+    'DLL for capturing screen and printing
     <System.Runtime.InteropServices.DllImport("gdi32.dll")>
     Public Shared Function BitBlt(ByVal hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal hdcSrc As IntPtr,
          ByVal nXSrc As Integer, ByVal nYSrc As Integer, ByVal dwRop As Integer) As Long
     End Function
+
+
     'get the screenshot
     Private memoryImage As Bitmap
+    'Capture boarding pass panel
     Private Sub CaptureScreen()
         Dim mygraphics As Graphics = Me.pnlBoardingPass.CreateGraphics()
         Dim s As Size = Me.pnlBoardingPass.Size
@@ -130,11 +144,15 @@
         mygraphics.ReleaseHdc(dc1)
         memoryGraphics.ReleaseHdc(dc2)
     End Sub
+
+
+    'Sets print area for print button event
     Private Sub printDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         e.Graphics.DrawImage(memoryImage, 0, 0)
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    'Prints Boarding Pass
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         CaptureScreen()
         PrintDocument1.Print()
     End Sub

@@ -24,18 +24,18 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.rbFC = New System.Windows.Forms.RadioButton()
         Me.rbEco = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAssign = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.pnlBP = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblBPClass = New System.Windows.Forms.Label()
-        Me.lblBPSeat = New System.Windows.Forms.Label()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.pnlBoardingPass = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblBPSeat = New System.Windows.Forms.Label()
+        Me.lblBPClass = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.pbSeat10 = New System.Windows.Forms.PictureBox()
         Me.pbSeat9 = New System.Windows.Forms.PictureBox()
         Me.pbSeat8 = New System.Windows.Forms.PictureBox()
@@ -86,14 +86,14 @@ Partial Class Form1
         Me.rbEco.Text = "Economy"
         Me.rbEco.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAssign
         '
-        Me.Button1.Location = New System.Drawing.Point(124, 562)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Assign Seat"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAssign.Location = New System.Drawing.Point(124, 562)
+        Me.btnAssign.Name = "btnAssign"
+        Me.btnAssign.Size = New System.Drawing.Size(75, 23)
+        Me.btnAssign.TabIndex = 2
+        Me.btnAssign.Text = "Assign Seat"
+        Me.btnAssign.UseVisualStyleBackColor = True
         '
         'btnClose
         '
@@ -108,60 +108,13 @@ Partial Class Form1
         '
         Me.pnlBP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pnlBP.Controls.Add(Me.pnlBoardingPass)
-        Me.pnlBP.Controls.Add(Me.Button2)
+        Me.pnlBP.Controls.Add(Me.btnPrint)
         Me.pnlBP.Controls.Add(Me.btnClose)
         Me.pnlBP.Location = New System.Drawing.Point(12, 12)
         Me.pnlBP.Name = "pnlBP"
         Me.pnlBP.Size = New System.Drawing.Size(312, 238)
         Me.pnlBP.TabIndex = 5
         Me.pnlBP.Visible = False
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(154, 192)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Print"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 25)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Boarding Pass"
-        '
-        'lblBPClass
-        '
-        Me.lblBPClass.AutoSize = True
-        Me.lblBPClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBPClass.Location = New System.Drawing.Point(5, 78)
-        Me.lblBPClass.Name = "lblBPClass"
-        Me.lblBPClass.Size = New System.Drawing.Size(79, 18)
-        Me.lblBPClass.TabIndex = 8
-        Me.lblBPClass.Text = "First Class"
-        '
-        'lblBPSeat
-        '
-        Me.lblBPSeat.AutoSize = True
-        Me.lblBPSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBPSeat.Location = New System.Drawing.Point(3, 47)
-        Me.lblBPSeat.Name = "lblBPSeat"
-        Me.lblBPSeat.Size = New System.Drawing.Size(194, 29)
-        Me.lblBPSeat.TabIndex = 7
-        Me.lblBPSeat.Text = "Seat Number: 1"
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.Document = Me.PrintDocument1
-        Me.PrintDialog1.UseEXDialog = True
-        '
-        'PrintDocument1
-        '
         '
         'pnlBoardingPass
         '
@@ -195,6 +148,53 @@ Partial Class Form1
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(165, 25)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Boarding Pass"
+        '
+        'lblBPSeat
+        '
+        Me.lblBPSeat.AutoSize = True
+        Me.lblBPSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBPSeat.Location = New System.Drawing.Point(3, 47)
+        Me.lblBPSeat.Name = "lblBPSeat"
+        Me.lblBPSeat.Size = New System.Drawing.Size(194, 29)
+        Me.lblBPSeat.TabIndex = 7
+        Me.lblBPSeat.Text = "Seat Number: 1"
+        '
+        'lblBPClass
+        '
+        Me.lblBPClass.AutoSize = True
+        Me.lblBPClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBPClass.Location = New System.Drawing.Point(5, 78)
+        Me.lblBPClass.Name = "lblBPClass"
+        Me.lblBPClass.Size = New System.Drawing.Size(79, 18)
+        Me.lblBPClass.TabIndex = 8
+        Me.lblBPClass.Text = "First Class"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Location = New System.Drawing.Point(154, 192)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(100, 23)
+        Me.btnPrint.TabIndex = 10
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.Document = Me.PrintDocument1
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintDocument1
+        '
         '
         'pbSeat10
         '
@@ -312,7 +312,7 @@ Partial Class Form1
         Me.Controls.Add(Me.pbSeat3)
         Me.Controls.Add(Me.pbSeat2)
         Me.Controls.Add(Me.pbSeat1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAssign)
         Me.Controls.Add(Me.rbEco)
         Me.Controls.Add(Me.rbFC)
         Me.Controls.Add(Me.PictureBox1)
@@ -343,7 +343,7 @@ Partial Class Form1
 
     Friend WithEvents rbFC As RadioButton
     Friend WithEvents rbEco As RadioButton
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAssign As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents pnlBP As Panel
     Friend WithEvents Label4 As Label
@@ -360,7 +360,7 @@ Partial Class Form1
     Friend WithEvents pbSeat8 As PictureBox
     Friend WithEvents pbSeat9 As PictureBox
     Friend WithEvents pbSeat10 As PictureBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnPrint As Button
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents pnlBoardingPass As Panel
