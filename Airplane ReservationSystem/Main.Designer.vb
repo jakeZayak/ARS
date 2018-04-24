@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,17 +25,15 @@ Partial Class Form1
         Me.rbFC = New System.Windows.Forms.RadioButton()
         Me.rbEco = New System.Windows.Forms.RadioButton()
         Me.btnAssign = New System.Windows.Forms.Button()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.pnlBP = New System.Windows.Forms.Panel()
-        Me.pnlBoardingPass = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblBPSeat = New System.Windows.Forms.Label()
-        Me.lblBPClass = New System.Windows.Forms.Label()
-        Me.btnPrint = New System.Windows.Forms.Button()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearFlightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pbSeat10 = New System.Windows.Forms.PictureBox()
         Me.pbSeat9 = New System.Windows.Forms.PictureBox()
         Me.pbSeat8 = New System.Windows.Forms.PictureBox()
@@ -47,10 +45,7 @@ Partial Class Form1
         Me.pbSeat2 = New System.Windows.Forms.PictureBox()
         Me.pbSeat1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pnlBP.SuspendLayout()
-        Me.pnlBoardingPass.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         CType(Me.pbSeat10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSeat9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSeat8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,9 +62,11 @@ Partial Class Form1
         'rbFC
         '
         Me.rbFC.AutoSize = True
-        Me.rbFC.Location = New System.Drawing.Point(80, 539)
+        Me.rbFC.Checked = True
+        Me.rbFC.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbFC.Location = New System.Drawing.Point(16, 69)
         Me.rbFC.Name = "rbFC"
-        Me.rbFC.Size = New System.Drawing.Size(72, 17)
+        Me.rbFC.Size = New System.Drawing.Size(146, 36)
         Me.rbFC.TabIndex = 0
         Me.rbFC.TabStop = True
         Me.rbFC.Text = "First Class"
@@ -78,128 +75,85 @@ Partial Class Form1
         'rbEco
         '
         Me.rbEco.AutoSize = True
-        Me.rbEco.Location = New System.Drawing.Point(182, 539)
+        Me.rbEco.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbEco.Location = New System.Drawing.Point(16, 318)
         Me.rbEco.Name = "rbEco"
-        Me.rbEco.Size = New System.Drawing.Size(69, 17)
+        Me.rbEco.Size = New System.Drawing.Size(202, 36)
         Me.rbEco.TabIndex = 1
         Me.rbEco.TabStop = True
-        Me.rbEco.Text = "Economy"
+        Me.rbEco.Text = "Economy Class"
         Me.rbEco.UseVisualStyleBackColor = True
         '
         'btnAssign
         '
-        Me.btnAssign.Location = New System.Drawing.Point(124, 562)
+        Me.btnAssign.Location = New System.Drawing.Point(12, 585)
         Me.btnAssign.Name = "btnAssign"
-        Me.btnAssign.Size = New System.Drawing.Size(75, 23)
+        Me.btnAssign.Size = New System.Drawing.Size(461, 40)
         Me.btnAssign.TabIndex = 2
         Me.btnAssign.Text = "Assign Seat"
         Me.btnAssign.UseVisualStyleBackColor = True
-        '
-        'btnClose
-        '
-        Me.btnClose.Location = New System.Drawing.Point(48, 192)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(100, 23)
-        Me.btnClose.TabIndex = 5
-        Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'pnlBP
-        '
-        Me.pnlBP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnlBP.Controls.Add(Me.pnlBoardingPass)
-        Me.pnlBP.Controls.Add(Me.btnPrint)
-        Me.pnlBP.Controls.Add(Me.btnClose)
-        Me.pnlBP.Location = New System.Drawing.Point(12, 12)
-        Me.pnlBP.Name = "pnlBP"
-        Me.pnlBP.Size = New System.Drawing.Size(312, 238)
-        Me.pnlBP.TabIndex = 5
-        Me.pnlBP.Visible = False
-        '
-        'pnlBoardingPass
-        '
-        Me.pnlBoardingPass.Controls.Add(Me.PictureBox3)
-        Me.pnlBoardingPass.Controls.Add(Me.PictureBox2)
-        Me.pnlBoardingPass.Controls.Add(Me.Label4)
-        Me.pnlBoardingPass.Controls.Add(Me.lblBPSeat)
-        Me.pnlBoardingPass.Controls.Add(Me.lblBPClass)
-        Me.pnlBoardingPass.Location = New System.Drawing.Point(3, 3)
-        Me.pnlBoardingPass.Name = "pnlBoardingPass"
-        Me.pnlBoardingPass.Size = New System.Drawing.Size(302, 167)
-        Me.pnlBoardingPass.TabIndex = 11
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Airplane_ReservationSystem.My.Resources.Resources.if_resolutions_21_897231
-        Me.PictureBox3.Location = New System.Drawing.Point(198, 4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(100, 107)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 11
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Image = Global.Airplane_ReservationSystem.My.Resources.Resources._1608570_512
-        Me.PictureBox2.Location = New System.Drawing.Point(6, 117)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(293, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 25)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Boarding Pass"
-        '
-        'lblBPSeat
-        '
-        Me.lblBPSeat.AutoSize = True
-        Me.lblBPSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBPSeat.Location = New System.Drawing.Point(3, 47)
-        Me.lblBPSeat.Name = "lblBPSeat"
-        Me.lblBPSeat.Size = New System.Drawing.Size(194, 29)
-        Me.lblBPSeat.TabIndex = 7
-        Me.lblBPSeat.Text = "Seat Number: 1"
-        '
-        'lblBPClass
-        '
-        Me.lblBPClass.AutoSize = True
-        Me.lblBPClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBPClass.Location = New System.Drawing.Point(5, 78)
-        Me.lblBPClass.Name = "lblBPClass"
-        Me.lblBPClass.Size = New System.Drawing.Size(79, 18)
-        Me.lblBPClass.TabIndex = 8
-        Me.lblBPClass.Text = "First Class"
-        '
-        'btnPrint
-        '
-        Me.btnPrint.Location = New System.Drawing.Point(154, 192)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(100, 23)
-        Me.btnPrint.TabIndex = 10
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
         '
         'PrintDialog1
         '
         Me.PrintDialog1.Document = Me.PrintDocument1
         Me.PrintDialog1.UseEXDialog = True
         '
-        'PrintDocument1
+        'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(484, 24)
+        Me.MenuStrip1.TabIndex = 17
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearFlightToolStripMenuItem, Me.QuitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ClearFlightToolStripMenuItem
+        '
+        Me.ClearFlightToolStripMenuItem.Name = "ClearFlightToolStripMenuItem"
+        Me.ClearFlightToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.ClearFlightToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
+        Me.ClearFlightToolStripMenuItem.Text = "Clear Flight"
+        '
+        'QuitToolStripMenuItem
+        '
+        Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
+        Me.QuitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
+        Me.QuitToolStripMenuItem.Text = "Quit"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreditToolStripMenuItem})
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'CreditToolStripMenuItem
+        '
+        Me.CreditToolStripMenuItem.Name = "CreditToolStripMenuItem"
+        Me.CreditToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CreditToolStripMenuItem.Text = "Credit"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
         '
         'pbSeat10
         '
         Me.pbSeat10.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat10.Location = New System.Drawing.Point(150, 442)
+        Me.pbSeat10.Enabled = False
+        Me.pbSeat10.Location = New System.Drawing.Point(224, 486)
         Me.pbSeat10.Name = "pbSeat10"
         Me.pbSeat10.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat10.TabIndex = 16
@@ -208,7 +162,8 @@ Partial Class Form1
         'pbSeat9
         '
         Me.pbSeat9.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat9.Location = New System.Drawing.Point(150, 400)
+        Me.pbSeat9.Enabled = False
+        Me.pbSeat9.Location = New System.Drawing.Point(224, 444)
         Me.pbSeat9.Name = "pbSeat9"
         Me.pbSeat9.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat9.TabIndex = 15
@@ -217,7 +172,8 @@ Partial Class Form1
         'pbSeat8
         '
         Me.pbSeat8.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat8.Location = New System.Drawing.Point(150, 358)
+        Me.pbSeat8.Enabled = False
+        Me.pbSeat8.Location = New System.Drawing.Point(224, 402)
         Me.pbSeat8.Name = "pbSeat8"
         Me.pbSeat8.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat8.TabIndex = 14
@@ -226,7 +182,8 @@ Partial Class Form1
         'pbSeat7
         '
         Me.pbSeat7.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat7.Location = New System.Drawing.Point(150, 316)
+        Me.pbSeat7.Enabled = False
+        Me.pbSeat7.Location = New System.Drawing.Point(224, 360)
         Me.pbSeat7.Name = "pbSeat7"
         Me.pbSeat7.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat7.TabIndex = 13
@@ -235,7 +192,8 @@ Partial Class Form1
         'pbSeat6
         '
         Me.pbSeat6.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat6.Location = New System.Drawing.Point(150, 274)
+        Me.pbSeat6.Enabled = False
+        Me.pbSeat6.Location = New System.Drawing.Point(224, 318)
         Me.pbSeat6.Name = "pbSeat6"
         Me.pbSeat6.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat6.TabIndex = 12
@@ -244,7 +202,8 @@ Partial Class Form1
         'pbSeat5
         '
         Me.pbSeat5.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat5.Location = New System.Drawing.Point(150, 232)
+        Me.pbSeat5.Enabled = False
+        Me.pbSeat5.Location = New System.Drawing.Point(224, 237)
         Me.pbSeat5.Name = "pbSeat5"
         Me.pbSeat5.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat5.TabIndex = 11
@@ -253,7 +212,8 @@ Partial Class Form1
         'pbSeat4
         '
         Me.pbSeat4.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat4.Location = New System.Drawing.Point(150, 190)
+        Me.pbSeat4.Enabled = False
+        Me.pbSeat4.Location = New System.Drawing.Point(224, 195)
         Me.pbSeat4.Name = "pbSeat4"
         Me.pbSeat4.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat4.TabIndex = 10
@@ -262,7 +222,8 @@ Partial Class Form1
         'pbSeat3
         '
         Me.pbSeat3.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat3.Location = New System.Drawing.Point(150, 148)
+        Me.pbSeat3.Enabled = False
+        Me.pbSeat3.Location = New System.Drawing.Point(224, 153)
         Me.pbSeat3.Name = "pbSeat3"
         Me.pbSeat3.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat3.TabIndex = 9
@@ -271,7 +232,8 @@ Partial Class Form1
         'pbSeat2
         '
         Me.pbSeat2.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat2.Location = New System.Drawing.Point(150, 106)
+        Me.pbSeat2.Enabled = False
+        Me.pbSeat2.Location = New System.Drawing.Point(224, 111)
         Me.pbSeat2.Name = "pbSeat2"
         Me.pbSeat2.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat2.TabIndex = 8
@@ -280,7 +242,8 @@ Partial Class Form1
         'pbSeat1
         '
         Me.pbSeat1.BackColor = System.Drawing.Color.YellowGreen
-        Me.pbSeat1.Location = New System.Drawing.Point(150, 64)
+        Me.pbSeat1.Enabled = False
+        Me.pbSeat1.Location = New System.Drawing.Point(224, 69)
         Me.pbSeat1.Name = "pbSeat1"
         Me.pbSeat1.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat1.TabIndex = 7
@@ -290,18 +253,21 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = Global.Airplane_ReservationSystem.My.Resources.Resources._172567_512__1_
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 27)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(336, 533)
+        Me.PictureBox1.Size = New System.Drawing.Size(461, 552)
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Form1
+        'Main
         '
+        Me.AcceptButton = Me.btnAssign
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(336, 597)
-        Me.Controls.Add(Me.pnlBP)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(484, 632)
+        Me.Controls.Add(Me.rbEco)
+        Me.Controls.Add(Me.rbFC)
         Me.Controls.Add(Me.pbSeat10)
         Me.Controls.Add(Me.pbSeat9)
         Me.Controls.Add(Me.pbSeat8)
@@ -313,18 +279,16 @@ Partial Class Form1
         Me.Controls.Add(Me.pbSeat2)
         Me.Controls.Add(Me.pbSeat1)
         Me.Controls.Add(Me.btnAssign)
-        Me.Controls.Add(Me.rbEco)
-        Me.Controls.Add(Me.rbFC)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Airline Reservations System"
-        Me.pnlBP.ResumeLayout(False)
-        Me.pnlBoardingPass.ResumeLayout(False)
-        Me.pnlBoardingPass.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         CType(Me.pbSeat10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbSeat9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbSeat8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -344,11 +308,6 @@ Partial Class Form1
     Friend WithEvents rbFC As RadioButton
     Friend WithEvents rbEco As RadioButton
     Friend WithEvents btnAssign As Button
-    Friend WithEvents btnClose As Button
-    Friend WithEvents pnlBP As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents lblBPClass As Label
-    Friend WithEvents lblBPSeat As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pbSeat1 As PictureBox
     Friend WithEvents pbSeat2 As PictureBox
@@ -360,10 +319,13 @@ Partial Class Form1
     Friend WithEvents pbSeat8 As PictureBox
     Friend WithEvents pbSeat9 As PictureBox
     Friend WithEvents pbSeat10 As PictureBox
-    Friend WithEvents btnPrint As Button
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents pnlBoardingPass As Panel
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearFlightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CreditToolStripMenuItem As ToolStripMenuItem
 End Class
