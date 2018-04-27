@@ -37,5 +37,19 @@ Airplane ReservationSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:Airplane_ReservationSystem.Main">
+ <summary> "Application Summary"
+ This application is the final project for CPT 212-001 Spring 2018
+ Instructor: S.Dobson
+ </summary>
+</member>
+<member name="M:Airplane_ReservationSystem.Main.pbSeat9_Click(System.Object,System.EventArgs)">
+ <summary>
+ The follwing event handlers allow the user to go back and print boarding passes
+ for previously booked seats.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 </members>
 </doc>

@@ -63,10 +63,10 @@ Partial Class Main
         '
         Me.rbFC.AutoSize = True
         Me.rbFC.Checked = True
-        Me.rbFC.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbFC.Location = New System.Drawing.Point(16, 69)
+        Me.rbFC.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbFC.Location = New System.Drawing.Point(12, 558)
         Me.rbFC.Name = "rbFC"
-        Me.rbFC.Size = New System.Drawing.Size(146, 36)
+        Me.rbFC.Size = New System.Drawing.Size(127, 34)
         Me.rbFC.TabIndex = 0
         Me.rbFC.TabStop = True
         Me.rbFC.Text = "First Class"
@@ -75,22 +75,24 @@ Partial Class Main
         'rbEco
         '
         Me.rbEco.AutoSize = True
-        Me.rbEco.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbEco.Location = New System.Drawing.Point(16, 318)
+        Me.rbEco.BackColor = System.Drawing.Color.Transparent
+        Me.rbEco.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbEco.ForeColor = System.Drawing.Color.Black
+        Me.rbEco.Location = New System.Drawing.Point(225, 558)
         Me.rbEco.Name = "rbEco"
-        Me.rbEco.Size = New System.Drawing.Size(202, 36)
+        Me.rbEco.Size = New System.Drawing.Size(175, 34)
         Me.rbEco.TabIndex = 1
         Me.rbEco.TabStop = True
         Me.rbEco.Text = "Economy Class"
-        Me.rbEco.UseVisualStyleBackColor = True
+        Me.rbEco.UseVisualStyleBackColor = False
         '
         'btnAssign
         '
-        Me.btnAssign.Location = New System.Drawing.Point(12, 585)
+        Me.btnAssign.Location = New System.Drawing.Point(12, 598)
         Me.btnAssign.Name = "btnAssign"
-        Me.btnAssign.Size = New System.Drawing.Size(461, 40)
+        Me.btnAssign.Size = New System.Drawing.Size(388, 27)
         Me.btnAssign.TabIndex = 2
-        Me.btnAssign.Text = "Assign Seat"
+        Me.btnAssign.Text = "Book Seat"
         Me.btnAssign.UseVisualStyleBackColor = True
         '
         'PrintDialog1
@@ -104,7 +106,7 @@ Partial Class Main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(484, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(413, 24)
         Me.MenuStrip1.TabIndex = 17
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -140,7 +142,7 @@ Partial Class Main
         'CreditToolStripMenuItem
         '
         Me.CreditToolStripMenuItem.Name = "CreditToolStripMenuItem"
-        Me.CreditToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CreditToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
         Me.CreditToolStripMenuItem.Text = "Credit"
         '
         'HelpToolStripMenuItem
@@ -153,7 +155,7 @@ Partial Class Main
         '
         Me.pbSeat10.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat10.Enabled = False
-        Me.pbSeat10.Location = New System.Drawing.Point(224, 486)
+        Me.pbSeat10.Location = New System.Drawing.Point(188, 469)
         Me.pbSeat10.Name = "pbSeat10"
         Me.pbSeat10.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat10.TabIndex = 16
@@ -163,7 +165,7 @@ Partial Class Main
         '
         Me.pbSeat9.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat9.Enabled = False
-        Me.pbSeat9.Location = New System.Drawing.Point(224, 444)
+        Me.pbSeat9.Location = New System.Drawing.Point(188, 427)
         Me.pbSeat9.Name = "pbSeat9"
         Me.pbSeat9.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat9.TabIndex = 15
@@ -173,7 +175,7 @@ Partial Class Main
         '
         Me.pbSeat8.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat8.Enabled = False
-        Me.pbSeat8.Location = New System.Drawing.Point(224, 402)
+        Me.pbSeat8.Location = New System.Drawing.Point(188, 385)
         Me.pbSeat8.Name = "pbSeat8"
         Me.pbSeat8.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat8.TabIndex = 14
@@ -183,7 +185,7 @@ Partial Class Main
         '
         Me.pbSeat7.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat7.Enabled = False
-        Me.pbSeat7.Location = New System.Drawing.Point(224, 360)
+        Me.pbSeat7.Location = New System.Drawing.Point(188, 343)
         Me.pbSeat7.Name = "pbSeat7"
         Me.pbSeat7.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat7.TabIndex = 13
@@ -193,7 +195,7 @@ Partial Class Main
         '
         Me.pbSeat6.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat6.Enabled = False
-        Me.pbSeat6.Location = New System.Drawing.Point(224, 318)
+        Me.pbSeat6.Location = New System.Drawing.Point(188, 301)
         Me.pbSeat6.Name = "pbSeat6"
         Me.pbSeat6.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat6.TabIndex = 12
@@ -203,7 +205,7 @@ Partial Class Main
         '
         Me.pbSeat5.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat5.Enabled = False
-        Me.pbSeat5.Location = New System.Drawing.Point(224, 237)
+        Me.pbSeat5.Location = New System.Drawing.Point(188, 240)
         Me.pbSeat5.Name = "pbSeat5"
         Me.pbSeat5.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat5.TabIndex = 11
@@ -213,7 +215,7 @@ Partial Class Main
         '
         Me.pbSeat4.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat4.Enabled = False
-        Me.pbSeat4.Location = New System.Drawing.Point(224, 195)
+        Me.pbSeat4.Location = New System.Drawing.Point(188, 198)
         Me.pbSeat4.Name = "pbSeat4"
         Me.pbSeat4.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat4.TabIndex = 10
@@ -223,7 +225,7 @@ Partial Class Main
         '
         Me.pbSeat3.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat3.Enabled = False
-        Me.pbSeat3.Location = New System.Drawing.Point(224, 153)
+        Me.pbSeat3.Location = New System.Drawing.Point(188, 156)
         Me.pbSeat3.Name = "pbSeat3"
         Me.pbSeat3.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat3.TabIndex = 9
@@ -233,7 +235,7 @@ Partial Class Main
         '
         Me.pbSeat2.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat2.Enabled = False
-        Me.pbSeat2.Location = New System.Drawing.Point(224, 111)
+        Me.pbSeat2.Location = New System.Drawing.Point(188, 114)
         Me.pbSeat2.Name = "pbSeat2"
         Me.pbSeat2.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat2.TabIndex = 8
@@ -243,7 +245,7 @@ Partial Class Main
         '
         Me.pbSeat1.BackColor = System.Drawing.Color.YellowGreen
         Me.pbSeat1.Enabled = False
-        Me.pbSeat1.Location = New System.Drawing.Point(224, 69)
+        Me.pbSeat1.Location = New System.Drawing.Point(188, 72)
         Me.pbSeat1.Name = "pbSeat1"
         Me.pbSeat1.Size = New System.Drawing.Size(35, 36)
         Me.pbSeat1.TabIndex = 7
@@ -255,7 +257,7 @@ Partial Class Main
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(12, 27)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(461, 552)
+        Me.PictureBox1.Size = New System.Drawing.Size(388, 525)
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
@@ -265,7 +267,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(484, 632)
+        Me.ClientSize = New System.Drawing.Size(413, 632)
         Me.Controls.Add(Me.rbEco)
         Me.Controls.Add(Me.rbFC)
         Me.Controls.Add(Me.pbSeat10)

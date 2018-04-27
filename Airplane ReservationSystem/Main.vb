@@ -1,8 +1,9 @@
 ﻿''''''''''''''''''''''''''''''''''''''''''''
-'Written By Jacob Zayak and Savion Jackson '
+'Author: Jacob Zayak                       '
+'Co-Author: Savion Jackson                 '
 '4/18/2018                                 '
-'Version 1.6                               '
-'Last Modified: 4/24/2018                  '
+'Version 1.7                               '
+'Last Modified: 4/27/2018                  '
 ''''''''''''''''''''''''''''''''''''''''''''
 
 
@@ -23,9 +24,9 @@ Public Class Main
     Dim fullEco As Boolean = False
 #End Region
 
-    'The entire program because I was too lazy to build out classes
+    'The entire program because I was too lazy to build a class
     Private Sub btnAssign_Click(sender As Object, e As EventArgs) Handles btnAssign.Click
-        'Control PictureBox array to hold seat icons
+        'Control array to hold seat icons
         Dim seatBox() As PictureBox = {pbSeat1, pbSeat2, pbSeat3, pbSeat4, pbSeat5, pbSeat6, pbSeat7, pbSeat8, pbSeat9, pbSeat10}
         'Bool variable to break out of While loop once a seat is filled.
         Dim emptySeat As Boolean = False
@@ -148,6 +149,7 @@ Public Class Main
         End While
     End Sub
 
+#Region "Menubar event handlers"
     'Resets main form
     Private Sub ClearFlightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearFlightToolStripMenuItem.Click
         Dim seats() As Boolean = {False, False, False, False, False, False, False, False, False, False}
@@ -172,7 +174,7 @@ Public Class Main
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
         Help.ShowDialog()
     End Sub
-
+#End Region
 
 #Region "Booked Seat event handlers for displaying Boarding Pass"
     ''' <summary>
@@ -240,6 +242,7 @@ Public Class Main
         BoardingPass.lblBPClass.Text = "Economy Class"
         BoardingPass.ShowDialog()
     End Sub
+
 #End Region
 
 End Class
